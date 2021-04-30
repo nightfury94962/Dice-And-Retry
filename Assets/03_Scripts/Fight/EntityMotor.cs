@@ -12,15 +12,15 @@ public class EntityMotor : MonoBehaviour
 
 	public EntityMotor enemy;
 
-	public List<Dice> dices = new List<Dice>()
-	{
-		new Dice(),
-	};
+	public List<Dice> dices = new List<Dice>();
 
 	// Start is called before the first frame update
 	void Start()
 	{
-		
+		for (int i = 0; i < 2; i++)
+		{
+			dices.Add(Dice.MakeRandomDice());
+		}
 	}
 
 	// Update is called once per frame
@@ -54,13 +54,13 @@ public class EntityMotor : MonoBehaviour
 		Dice.Face face = dice.GetFace();
 		switch(face.type)
 		{
-			case Dice.FaceType.damage:
+			case Dice.FaceType.Damage:
 				enemy.TakeDamage(face.value);
 				break;
-			case Dice.FaceType.autoDamage:
+			case Dice.FaceType.AutoDamage:
 				TakeDamage(face.value);
 				break;
-			case Dice.FaceType.heal:
+			case Dice.FaceType.Heal:
 				TakeDamage(-face.value);
 				break;
 		}
@@ -74,7 +74,7 @@ public class EntityMotor : MonoBehaviour
 	public void TakeDamage(int damage)
 	{
 		life -= damage;
-		Debug.LogFormat("{3} Take {0} damage, Life: {1}", damage, life, entity);
+		Debug.LogFormat("{2} Take {0} damage, Life: {1}", damage, life, entity);
 	}
 
 	public int DiceRemaining()

@@ -9,7 +9,7 @@ public class PlayerControler : MonoBehaviour
 	{
 		if (motor.myTurn)
 		{
-			motor.PlayDice(motor.dices[0]);
+			motor.PlayDice(motor.dices[Random.Range(0, motor.dices.Count)]);
 		}
 	}
 }

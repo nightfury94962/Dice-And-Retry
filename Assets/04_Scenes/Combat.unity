@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: 0
-  life: 0
+  life: 100
   myTurn: 0
   enemy: {fileID: 0}
 --- !u!4 &177581182
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: 0
-  life: 0
+  life: 100
   myTurn: 0
   enemy: {fileID: 0}
 --- !u!4 &818940200

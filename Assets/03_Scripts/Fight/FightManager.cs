@@ -14,6 +14,8 @@ public class FightManager : MonoBehaviour
 
 	public static FightManager instance;
 
+	public bool fightFinish = false;
+
 	private void Awake()
 	{
 		instance = this;
@@ -34,12 +36,18 @@ public class FightManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		
+		if (player.life <= 0 || enemy.life <= 0)
+		{
+			fightFinish = true;
+			player.myTurn = false;
+			enemy.myTurn = false;
+			Debug.Log("Game Over");
+		}
 	}
 
 	public async Task AsyncUpdate()
 	{
-		while(true)
+		while(!fightFinish)
 		{
 			await EntityPlay.YourTurn();
 			entityTurn = entityTurn == EntityMotor.Entity.player ? EntityMotor.Entity.enemy : EntityMotor.Entity.player;
