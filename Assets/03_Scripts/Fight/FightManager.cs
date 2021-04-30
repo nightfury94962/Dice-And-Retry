@@ -36,7 +36,7 @@ public class FightManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (player.life <= 0 || enemy.life <= 0)
+		if ((player.life <= 0 || enemy.life <= 0) && fightFinish == false)
 		{
 			fightFinish = true;
 			player.myTurn = false;
@@ -47,6 +47,7 @@ public class FightManager : MonoBehaviour
 
 	public async Task AsyncUpdate()
 	{
+		await Task.Delay(1000);
 		while(!fightFinish)
 		{
 			await EntityPlay.YourTurn();
