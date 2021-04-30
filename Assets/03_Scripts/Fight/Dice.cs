@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Dice 
 {
+	public float timeLeft;
 	public bool used = false;
 	public List<Face> faces = new List<Face>();
 
