@@ -60,6 +60,12 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartGame("Combat"));
     }
 
+    public void LoadMainScene()
+    {
+        transition.gameObject.SetActive(true);
+        StartCoroutine(StartGame("TestScene"));
+    }
+
     private IEnumerator StartGame(string scene)
     {
         transition.SetTrigger("End");

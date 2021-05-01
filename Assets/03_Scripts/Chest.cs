@@ -12,9 +12,18 @@ public class Chest : MonoBehaviour
     public GameObject closeChest;
     public GameObject openChest;
 
+    public AudioSource audioSource;
+    public AudioClip OpenChestSound;
+
     private void Awake()
     {
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
+        audioSource = gameObject.GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        audioSource.Play();
     }
 
     // Update is called once per frame
@@ -63,6 +72,8 @@ public class Chest : MonoBehaviour
 
             openChest.SetActive(true);
             closeChest.SetActive(false);
+
+            audioSource.PlayOneShot(OpenChestSound);
         }
     }
 }
