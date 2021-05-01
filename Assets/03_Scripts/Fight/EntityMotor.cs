@@ -7,19 +7,30 @@ public class EntityMotor : MonoBehaviour
 {
 	public Entity entity = Entity.none;
 	public int life = 100;
+	public int maxLife = 100;
+
 
 	public bool myTurn = false;
 
 	public EntityMotor enemy;
+	public Controler controler;
 
 	public List<Dice> dices = new List<Dice>();
 
-	// Start is called before the first frame update
+
 	void Start()
 	{
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 15; i++)
 		{
-			dices.Add(Dice.MakeRandomDice());
+			if (entity == Entity.player)
+			{
+				if (i == 0)
+					dices.Add(Dice.MakeRandomDice(i == 0 ? Dice.DiceScarcity.Rare : Dice.DiceScarcity.Comun));
+				else
+					dices.Add(Dice.MakeRandomDice());
+			}
+			else
+				dices.Add(Dice.MakeRandomDice());
 		}
 	}
 
@@ -39,6 +50,7 @@ public class EntityMotor : MonoBehaviour
 	{
 		myTurn = true;
 		ResetDice();
+		controler.InitTurn();
 		Debug.LogFormat("{0} Play", entity);
 		while(myTurn)
 		{
@@ -74,6 +86,10 @@ public class EntityMotor : MonoBehaviour
 	public void TakeDamage(int damage)
 	{
 		life -= damage;
+		if (life > maxLife)
+			life = maxLife;
+		if (life < 0)
+			life = 0;
 		Debug.LogFormat("{2} Take {0} damage, Life: {1}", damage, life, entity);
 	}
 
@@ -100,3 +116,4 @@ public class EntityMotor : MonoBehaviour
 		enemy,
 	}
 }
+
