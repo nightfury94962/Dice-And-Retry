@@ -10,7 +10,7 @@ public class MenuManager : MonoBehaviour
         Settings.instance.SaveSettings();
 
         // Lancer la Scene: MainScene
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Introduction");
     }
 
     public void ShowSettings()
