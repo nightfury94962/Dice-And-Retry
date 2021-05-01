@@ -12,7 +12,7 @@ public class PlayerControler : Controler
 
 	public override void InitTurn()
 	{
-		UIManager.instance.inventory.RefreshDiceBar(this);
+		UIManager.instance.inventory.RefreshDiceBar(motor.dices, this);
 	}
 
 	public void PlayDice(Dice dice)
@@ -20,7 +20,7 @@ public class PlayerControler : Controler
 		if (motor.myTurn)
 		{
 			motor.PlayDice(dice);
-			UIManager.instance.inventory.RefreshDiceBar(this);
+			UIManager.instance.inventory.RefreshDiceBar(motor.dices, this);
 		}
 	}
 }
