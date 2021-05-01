@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PauseManager pauseScreen;
 
     [SerializeField] private Animator transition;
-    private float transitionTime = 1f;
+    private float transitionTime = 5f;
 
     public static bool isPause;
     public static bool isGameOver;

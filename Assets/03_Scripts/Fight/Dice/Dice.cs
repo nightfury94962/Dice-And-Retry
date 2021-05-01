@@ -9,9 +9,12 @@ public class Dice
 	public bool used = false;
 	public DiceScarcity scarcity;
 
+
 	public Face GetFace()
 	{
 		used = true;
+		if (throwRemaining != -1)
+			throwRemaining -= 1;
 		return faces[Random.Range(0, faces.Count)];
 	}
 
@@ -40,6 +43,8 @@ public class Dice
 		int minValue = 0;
 		int maxValue = 0;
 		float malusChance = 0;
+
+		dice.throwRemaining = Random.value > 0.60f ? Random.Range(5, 25): -1;
 
 		switch(_scarcity)
 		{
@@ -93,28 +98,57 @@ public class Dice
 
 		return dice;
 	}
-	
 
+	public static Dice MakeDice(DiceData data)
+	{
+		Dice dice = new Dice();
+		dice.scarcity = data.scarcity;
+		dice.throwRemaining = data.throwQuantity;
+
+		for (int i = 0; i < data.value.Length; i++)
+		{
+			dice.faces.Add(new Face()
+			{
+				value = data.value[i],
+				type = data.facesType[i],
+			});
+		}
+		return dice;
+	}
+
+	public override string ToString()
+	{
+		string result = "";
+		result += scarcity.ToString() + "\n";
+		result += throwRemaining + "\n \n";
+
+		foreach (Face curFace in faces)
+		{
+			result += curFace.value.ToString() + " " + curFace.type.ToString() + "\n";
+ 		}
+		return result;
+
+	}
+
+
+	[SerializeField]
 	public struct Face
 	{
 		public FaceType type;
 		public int value;
 
-		public Color FaceColor
+		public Color FaceColor()
 		{
-			get
+			switch (type)
 			{
-				switch (type)
-				{
-					case FaceType.Damage:
-						return Color.red;
-					case FaceType.Heal:
-						return Color.green;
-					case FaceType.AutoDamage:
-						return new Color(0.5f, 0, 0);
-				}
-				return new Color(0, 1, 1);
+				case FaceType.Damage:
+					return Color.red;
+				case FaceType.Heal:
+					return Color.green;
+				case FaceType.AutoDamage:
+					return new Color(0.5f, 0, 0);
 			}
+			return new Color(0, 1, 1);
 		}
 	}
 
