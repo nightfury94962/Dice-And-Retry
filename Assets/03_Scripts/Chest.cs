@@ -36,7 +36,7 @@ public class Chest : MonoBehaviour
 	}
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Player")
+		if (collision.gameObject.tag == "Player" && !isOpen)
 		{
 			InteractUI.instance.SetText("Appuie sur 'E' pour interagir");
 			OnChest = true;
@@ -63,5 +63,8 @@ public class Chest : MonoBehaviour
 			Player.instence.dice.Add(Dice.MakeRandomDice(randomDices[Random.Range(0, randomDices.Length)]));
 
 		Player.instence.inventory.RefreshDiceBar(Player.instence.dice, null);
+
+		isOpen = true;
+		InteractUI.instance.SetText("");
 	}
 }
