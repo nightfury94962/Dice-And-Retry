@@ -17,6 +17,8 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private Text title;
     [SerializeField] private GameObject buttonResume;
 
+    private string sampleScene = "SampleScene";
+
     [SerializeField] private Animator transition;
     private float transitionTime = 1f;
 
@@ -63,7 +65,7 @@ public class PauseManager : MonoBehaviour
 
     public void Retry()
     {
-        StartCoroutine(StartGame("TestScene"));
+        StartCoroutine(StartGame(sampleScene));
     }
 
     public void Quit()

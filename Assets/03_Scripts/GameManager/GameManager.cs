@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 		DontDestroyOnLoad(gameObject);
 		DontDestroyOnLoad(transition.gameObject);
 		DontDestroyOnLoad(pauseScreen.transform.parent.gameObject);
-		SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
+		SceneManager.LoadScene(combatScene, LoadSceneMode.Additive);
 		mainScene = SceneManager.GetActiveScene().name;
 	}
 
