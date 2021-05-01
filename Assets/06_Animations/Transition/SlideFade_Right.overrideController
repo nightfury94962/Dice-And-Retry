@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SlideFade_Right
+  m_Controller: {fileID: 9100000, guid: b87fd99e620a4440daa61317ac9aac3e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: a22a092e4c86647ddb32fa3b4ff64848, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1688cbd8e91874b09b5f882aacb5ed0b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 38e4d65f80a2e4b01921f3305eef03a3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 69401fcaed8a84c49af1a369fc767590, type: 2}
