@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (instance != null)
         {
-            Debug.LogWarning("Il existe deja une instance d'Inventory dans la scene");
+            Debug.LogWarning("Il existe deja une instance de PlayerHealth dans la scene");
             return;
         }
 

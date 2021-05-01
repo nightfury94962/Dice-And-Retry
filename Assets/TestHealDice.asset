@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bafb3e41179b459bb0cb4ef1a86c554, type: 3}
-  m_Name: DiceTest
+  m_Name: TestHealDice
   m_EditorClassIdentifier: 
   id: 0
   nom: 
