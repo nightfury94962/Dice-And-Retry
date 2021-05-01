@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip walkSoundEffect;
     private void Update()
     {
+        if (GameManager.isGameOver || GameManager.isPause)
+            return;
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         

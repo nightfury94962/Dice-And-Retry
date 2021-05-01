@@ -63,7 +63,10 @@ public class PauseManager : MonoBehaviour
 
     public void Retry()
     {
-        StartCoroutine(StartGame("TestScene"));
+        GameManager.isGameOver = false;
+        GameManager.isPause = false;
+
+        StartCoroutine(StartGame("SampleScene"));
     }
 
     public void Quit()

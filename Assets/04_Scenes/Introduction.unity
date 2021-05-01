@@ -188,7 +188,7 @@ MonoBehaviour:
     autour de lui qu'il aimait mourir.
   - "Il d\xE9sire les retrouver, mais pour se faire, il doit maintenant aller \xE0
     Jacta Est..."
-  sceneNameToLoad: TestScene
+  sceneNameToLoad: SampleScene
   timePerCharacters: 0.15
 --- !u!1 &315952578
 GameObject:
