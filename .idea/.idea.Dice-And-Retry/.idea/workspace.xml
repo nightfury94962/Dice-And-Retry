@@ -15,6 +15,8 @@
       <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Right.anim.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Up.anim" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Up.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dice-And-Retry/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dice-And-Retry/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/PlayerHealth.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/PF Props Chest 1.controller" beforeDir="false" />
@@ -64,10 +66,10 @@
       <option value="$PROJECT_DIR$/Assets/03_Scripts/Chest.cs" />
       <option value="$PROJECT_DIR$/Assets/HealthBar.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/Fight/DiceData.cs" />
-      <option value="$PROJECT_DIR$/Assets/03_Scripts/PlayerHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/Inventory.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/PickUpDice.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/03_Scripts/PlayerHealth.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rtwRwvAnzcFHvX8BUAPQnUiz9Q" />
@@ -118,7 +120,7 @@
       <updated>1619808692964</updated>
       <workItem from="1619808702967" duration="934000" />
       <workItem from="1619813699908" duration="13009000" />
-      <workItem from="1619861825635" duration="48000" />
+      <workItem from="1619861825635" duration="811000" />
     </task>
     <servers />
   </component>
