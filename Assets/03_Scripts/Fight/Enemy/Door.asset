@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018036f5ccef7864d9f095764e4b1206, type: 3}
+  m_Name: Door
+  m_EditorClassIdentifier: 
+  name: Door
+  life: 99999
+  sprites:
+  - {fileID: 21300000, guid: ccbcfd1c575dcca4caaa4cd8f15f914e, type: 3}
+  customDice:
+  - {fileID: 11400000, guid: f9d9c04cbf05bad45859dd16e074403d, type: 2}
+  randomDiceCount: 000000000000000000000000

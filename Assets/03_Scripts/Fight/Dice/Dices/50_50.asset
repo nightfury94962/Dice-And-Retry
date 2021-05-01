@@ -10,5 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bafb3e41179b459bb0cb4ef1a86c554, type: 3}
-  m_Name: DiceTest
+  m_Name: 50_50
   m_EditorClassIdentifier: 
+  scarcity: 2
+  throwQuantity: 2
+  value: 3200000032000000
+  facesType: 0000000002000000
