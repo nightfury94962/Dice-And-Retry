@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 018036f5ccef7864d9f095764e4b1206, type: 3}
-  m_Name: Test
+  m_Name: Something
   m_EditorClassIdentifier: 
-  name: Test
+  name: Something
   life: 100
   sprites:
-  - {fileID: 21300000, guid: dfc9e2014b3fa34428b162624c26015d, type: 3}
-  - {fileID: 21300000, guid: 86670b2bdac5c2945af34b24b6a6eac5, type: 3}
+  - {fileID: 21300000, guid: b352914b77dd09b4db79382b08505542, type: 3}
+  - {fileID: 21300000, guid: 0e8a51a6461ec66468632b7466ad05a6, type: 3}
   customDice: []
-  randomDiceCount: 0a0000000300000001000000
+  randomDiceCount: 050000000200000001000000
