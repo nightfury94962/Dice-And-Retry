@@ -36,12 +36,12 @@ public class FightManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if ((player.life <= 0 || enemy.life <= 0) && fightFinish == false)
+
+		if (player.life == 0 || enemy.life == 0f)
 		{
 			fightFinish = true;
 			player.myTurn = false;
 			enemy.myTurn = false;
-			Debug.Log("Game Over");
 		}
 	}
 
@@ -50,10 +50,19 @@ public class FightManager : MonoBehaviour
 		await Task.Delay(1000);
 		while(!fightFinish)
 		{
+			await Task.Delay(1000);
 			await EntityPlay.YourTurn();
 			entityTurn = entityTurn == EntityMotor.Entity.player ? EntityMotor.Entity.enemy : EntityMotor.Entity.player;
-
-			await Task.Delay(1000);
+		}
+		Debug.Log("Game Over");
+		await Task.Delay(1000);
+		if (player.life == 0)
+		{
+			GameManager.instance.GameOver();
+		}
+		else
+		{
+			GameManager.instance.LoadMainScene();
 		}
 	}
 

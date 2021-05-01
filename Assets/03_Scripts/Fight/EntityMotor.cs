@@ -14,6 +14,7 @@ public class EntityMotor : MonoBehaviour
 
 	public EntityMotor enemy;
 	public Controler controler;
+	public EntityGFX gfx;
 
 	public List<Dice> dices = new List<Dice>();
 
@@ -29,8 +30,6 @@ public class EntityMotor : MonoBehaviour
 				else
 					dices.Add(Dice.MakeRandomDice());
 			}
-			else
-				dices.Add(Dice.MakeRandomDice());
 		}
 	}
 
@@ -61,7 +60,7 @@ public class EntityMotor : MonoBehaviour
 
 	public bool PlayDice(Dice dice)
 	{
-		if (dice.used)
+		if (dice.used || dice.throwRemaining == 0)
 			return false;
 		Dice.Face face = dice.GetFace();
 		switch(face.type)
@@ -77,6 +76,9 @@ public class EntityMotor : MonoBehaviour
 				break;
 		}
 
+		if (dice.throwRemaining == 0)
+			dices.Remove(dice);
+
 		if (DiceRemaining() == 0)
 			myTurn = false;
 
@@ -90,7 +92,7 @@ public class EntityMotor : MonoBehaviour
 			life = maxLife;
 		if (life < 0)
 			life = 0;
-		Debug.LogFormat("{2} Take {0} damage, Life: {1}", damage, life, entity);
+		gfx.TakeDamage(damage);
 	}
 
 	public int DiceRemaining()
