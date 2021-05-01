@@ -5,10 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "DiceData", menuName = "Dice And Retry/Dice Data")]
 public class DiceData : ScriptableObject
 {
-    public string diceName;
+    public int id;
+    public string nom;
     public string description;
-    public GameObject diceModel;
-    public float life;
-    public int numberOfFaces;
+    public Sprite image;
+    public float nb_utilisation;
+    public int nb_face;
     public Dice.DiceType type;
 }
