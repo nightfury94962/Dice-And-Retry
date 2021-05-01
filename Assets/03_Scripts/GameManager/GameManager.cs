@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private PauseManager pauseScreen;
+
+    [SerializeField] private Animator transition;
+    private float transitionTime = 1f;
 
     public static bool isPause;
     public static bool isGameOver;
@@ -48,5 +52,20 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
 
         pauseScreen.ShowPauseScreen(PauseManager.TypeOfPause.GameOver, true);
+    }
+
+    public void LoadCombatScene()
+    {
+        transition.gameObject.SetActive(true);
+        StartCoroutine(StartGame("Combat"));
+    }
+
+    private IEnumerator StartGame(string scene)
+    {
+        transition.SetTrigger("End");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(scene);
     }
 }

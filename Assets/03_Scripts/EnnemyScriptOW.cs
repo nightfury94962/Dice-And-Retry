@@ -19,7 +19,7 @@ public class EnnemyScriptOW : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E)  && isInRange)
         {
-            SceneManager.LoadScene("Combat");
+            GameManager.instance.LoadCombatScene();
         }
     }
 
