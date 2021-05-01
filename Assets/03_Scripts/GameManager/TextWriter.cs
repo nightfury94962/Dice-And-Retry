@@ -33,17 +33,24 @@ public class TextWriter : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        // A n'import quel touche
+        if (Input.GetMouseButtonDown(0) ||
+            Input.GetMouseButtonDown(1) ||
+            Input.GetMouseButtonDown(2) ||
+            Input.anyKey)
         {
+            // L'affichage de la phrase n'est pas complete
             if(!onComplete)
-                this.currentTimePerCharacter = 0.03f;
+                this.currentTimePerCharacter = 0.03f; // Accélerer l'affichage du texte
 
+            // Sinon toutes les phrases ont été affichées
             else if (scenarioIndex >= textToWrite.Length-1)
             {
-                StartCoroutine(StartGame(this.sceneName));
-                GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().Stop();
+                StartCoroutine(StartGame(this.sceneName)); // Charger la scene suivante
+                GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().Stop(); // Stopper la musique
                 return;
             }
+            // Sinon phrase suivante
             else
             {
                 uiText.text = string.Empty;
@@ -54,19 +61,20 @@ public class TextWriter : MonoBehaviour
             }
         }
 
+        // Tant que l'affichage de la phrase n'est pas complete
         if (!onComplete)
         {
             timer -= Time.deltaTime;
             if(timer <= 0)
             {
-                // Display next character
+                // Afficher le caractère suivant
                 timer += currentTimePerCharacter;
                 characterIndex++;
                 uiText.text = textToWrite[scenarioIndex].Substring(0, characterIndex);
 
                 if(characterIndex >= textToWrite[scenarioIndex].Length)
                 {
-                    // Entire string displayed
+                    // Toute la phrase a été affichée
                     onComplete = true;
                     return;
                 }
