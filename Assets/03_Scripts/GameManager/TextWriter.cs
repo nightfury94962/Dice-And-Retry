@@ -9,6 +9,8 @@ public class TextWriter : MonoBehaviour
     [SerializeField] private Animator transition;
     private float transitionTime = 1f;
 
+    [SerializeField] private float speedText = 0.03f;
+
     private Text uiText;
     private string[] textToWrite;
     private int characterIndex;
@@ -41,7 +43,7 @@ public class TextWriter : MonoBehaviour
         {
             // L'affichage de la phrase n'est pas complete
             if(!onComplete)
-                this.currentTimePerCharacter = 0.03f; // Accélerer l'affichage du texte
+                this.currentTimePerCharacter = speedText; // Accélerer l'affichage du texte
 
             // Sinon toutes les phrases ont été affichées
             else if (scenarioIndex >= textToWrite.Length-1)
