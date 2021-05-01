@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 movement;
 
+    public bool isWalking;
+    public AudioSource audioSource;
+    public AudioClip walkSoundEffect;
     private void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -22,5 +25,29 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        
+        if(movement.x != 0 || movement.y != 0)
+        {
+            PlayWalkSound();
+            isWalking = true;
+        }
+        else
+        {
+            StopWalkSound();
+            isWalking = false;
+        }
+    }
+
+    public void PlayWalkSound()
+    {
+        if (!isWalking)
+        {
+            audioSource.Play();
+            audioSource.PlayOneShot(walkSoundEffect);
+        }
+    }
+    public void StopWalkSound()
+    {
+        audioSource.Stop();
     }
 }
