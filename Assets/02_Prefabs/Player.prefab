@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2636388615678100511}
   - component: {fileID: 2636388615678100510}
+  - component: {fileID: 5047860159172956949}
+  - component: {fileID: 584807192}
+  - component: {fileID: 2636388615678100509}
   - component: {fileID: 2636388615678100508}
   - component: {fileID: 2636388615678100505}
-  - component: {fileID: 2636388615678100509}
   - component: {fileID: 4008274098514945912}
-  - component: {fileID: 584807192}
-  - component: {fileID: 1091381532696213843}
   - component: {fileID: 1244375647939441417}
   m_Layer: 0
   m_Name: Player
@@ -88,6 +88,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5047860159172956949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2636388615678100507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a811b0febcdc98459212d91f7d477bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+--- !u!114 &584807192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2636388615678100507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17400da9d071b2478f31bd731bab483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}
+--- !u!114 &2636388615678100509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2636388615678100507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374db09661ce6ce4bb3f891a92437af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2.5
+  rb: {fileID: 2636388615678100508}
+  animator: {fileID: 4008274098514945912}
+  isWalking: 0
+  audioSource: {fileID: 1244375647939441417}
+  walkSoundEffect: {fileID: 8300000, guid: 309d3a0dabd57e64393cd4b34ba74f0d, type: 3}
 --- !u!50 &2636388615678100508
 Rigidbody2D:
   serializedVersion: 4
@@ -135,24 +181,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23819184, y: 0.09215903}
   m_EdgeRadius: 0
---- !u!114 &2636388615678100509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2636388615678100507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 374db09661ce6ce4bb3f891a92437af5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.5
-  rb: {fileID: 2636388615678100508}
-  animator: {fileID: 4008274098514945912}
-  isWalking: 0
-  audioSource: {fileID: 1244375647939441417}
-  walkSoundEffect: {fileID: 8300000, guid: 309d3a0dabd57e64393cd4b34ba74f0d, type: 3}
 --- !u!95 &4008274098514945912
 Animator:
   serializedVersion: 3
@@ -172,33 +200,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &584807192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2636388615678100507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a17400da9d071b2478f31bd731bab483, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  healthBar: {fileID: 0}
---- !u!114 &1091381532696213843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2636388615678100507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e882f5988774f847a4bd383071defee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1244375647939441417
 AudioSource:
   m_ObjectHideFlags: 0

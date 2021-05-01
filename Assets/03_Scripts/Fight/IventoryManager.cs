@@ -53,7 +53,7 @@ public class IventoryManager : MonoBehaviour
 		if (dice.throwRemaining != -1)
 		{
 			throwRemaining.gameObject.SetActive(true);
-			throwRemaining.text = "Throw Remaining: " + dice.throwRemaining;
+			throwRemaining.text = "Lancé Restant: " + dice.throwRemaining;
 		}
 
 		faceBG.SetActive(true);
