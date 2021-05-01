@@ -38,6 +38,7 @@ public class TextWriter : MonoBehaviour
             else if (scenarioIndex >= textToWrite.Length-1)
             {
                 SceneManager.LoadScene(this.sceneName);
+                GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().Stop();
                 return;
             }
             else
