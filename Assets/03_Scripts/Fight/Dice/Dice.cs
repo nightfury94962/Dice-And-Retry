@@ -142,11 +142,11 @@ public class Dice
 			switch (type)
 			{
 				case FaceType.Damage:
-					return Color.red;
+					return Color.red * 0.9f;
 				case FaceType.Heal:
-					return Color.green;
+					return Color.green * 0.9f;
 				case FaceType.AutoDamage:
-					return new Color(0.5f, 0, 0);
+					return new Color(0.3f, 0.3f, 0.3f);
 			}
 			return new Color(0, 1, 1);
 		}
