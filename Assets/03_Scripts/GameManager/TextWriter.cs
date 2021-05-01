@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class TextWriter : MonoBehaviour
 {
+    [SerializeField] private Animator transition;
+    private float transitionTime = 1f;
+
     private Text uiText;
     private string[] textToWrite;
     private int characterIndex;
@@ -43,8 +46,8 @@ public class TextWriter : MonoBehaviour
             // Sinon toutes les phrases ont été affichées
             else if (scenarioIndex >= textToWrite.Length-1)
             {
-                SceneManager.LoadScene(this.sceneName); // Charger la scene suivante
-                GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().Stop(); // Stopper la musique
+                transition.gameObject.SetActive(true);
+                StartCoroutine(StartGame(this.sceneName)); // Charger la scene suivante
                 return;
             }
             // Sinon phrase suivante
@@ -77,5 +80,15 @@ public class TextWriter : MonoBehaviour
                 }
             }
         }
+    }
+
+    private IEnumerator StartGame(string scene)
+    {
+        transition.SetTrigger("End");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(scene);
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().Stop(); // Stopper la musique
     }
 }

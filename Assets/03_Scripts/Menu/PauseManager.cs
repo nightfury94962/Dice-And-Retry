@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,6 +16,9 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private Image panel;
     [SerializeField] private Text title;
     [SerializeField] private GameObject buttonResume;
+
+    [SerializeField] private Animator transition;
+    private float transitionTime = 1f;
 
     private Color gameOverPanelColor = new Color32(255, 0, 18, 100); //new Color(1f, 0f, 7.06f, 35.22f); // RGB(255,0,18,100)
     private Color pausePanelColor = new Color32(125, 125, 125, 100); //new Color(49f, 49f, 49f, 35.22f); // RGB(125,125,125,100)
@@ -59,12 +63,20 @@ public class PauseManager : MonoBehaviour
 
     public void Retry()
     {
-        ShowPauseScreen(TypeOfPause.Both, false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        StartCoroutine(StartGame("TestScene"));
     }
 
     public void Quit()
     {
-        SceneManager.LoadScene("Menu");
+        StartCoroutine(StartGame("Menu"));
+    }
+
+    private IEnumerator StartGame(string scene)
+    {
+        transition.SetTrigger("End");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(scene);
     }
 }
