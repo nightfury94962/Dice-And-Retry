@@ -12,14 +12,14 @@ public class IventoryManager : MonoBehaviour
 	public Text throwRemaining;
 
 	public Sprite[] scarcity;
-	public void RefreshDiceBar(PlayerControler playerControler)
+	public void RefreshDiceBar(List<Dice> dice, PlayerControler playerControler)
 	{
 		foreach (Transform curChild in diceContente)
 		{
 			if (curChild.gameObject.activeSelf)
 				Destroy(curChild.gameObject);
 		}
-		foreach (Dice curDice in FightManager.instance.player.dices)
+		foreach (Dice curDice in dice)
 		{
 			GameObject _diceGo = Instantiate(diceContente.Find("Template").gameObject);
 			_diceGo.SetActive(true);
