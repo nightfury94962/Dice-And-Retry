@@ -2,14 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControler : MonoBehaviour
+public class PlayerControler : Controler
 {
 	public EntityMotor motor;
 	void Update()
 	{
+
+	}
+
+	public override void InitTurn()
+	{
+		UIManager.instance.RefreshDiceBar();
+	}
+
+	public void PlayDice(Dice dice)
+	{
 		if (motor.myTurn)
 		{
-			motor.PlayDice(motor.dices[Random.Range(0, motor.dices.Count)]);
+			motor.PlayDice(dice);
+			UIManager.instance.RefreshDiceBar();
 		}
 	}
 }
