@@ -30,7 +30,7 @@ public class EnnemyScriptOW : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            InteractUI.instance.SetText("Appuie sur 'E' pour te battre avec" + enemyData.name);
+            InteractUI.instance.SetText("Appuie sur 'E' pour te battre avec " + enemyData.name);
             isInRange = true;
         }
     }
