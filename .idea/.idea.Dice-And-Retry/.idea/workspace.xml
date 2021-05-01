@@ -2,48 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b9255bf-7c5f-4f80-a5a9-5cc4908e5d95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Idle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Idle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Player_Animation/Player_Up.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/02_Prefabs/Ennemy.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/02_Prefabs/Ennemy.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/03_Scripts/EnnemyScriptOW.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/03_Scripts/EnnemyScriptOW.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation/Ennemy.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation/Ennemy.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation/Ennemy_Neutre_Idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation/Ennemy_Neutre_Idle.anim.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dice-And-Retry/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dice-And-Retry/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/PlayerHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/PF Props Chest 1.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/PF Props Chest 1.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/PF Props Chest.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/PF Props Chest.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player_Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player_Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player_Walk_Down.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player_Walk_Down.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player_Walk_Left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player_Walk_Left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player_Walk_Right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player_Walk_Right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player_Walk_Side.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player_Walk_Side.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player_Walk_Up.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/11_Graphics/Animation/Player_Walk_Up.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DiceTest.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DiceTest.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ressources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StandartDice.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StandartDice.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StandartDice.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StandartDice.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestHealDice.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestHealDice.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestHealDice.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestHealDice.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/04_Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/04_Scenes/TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/04_Scenes/TestScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/04_Scenes/TestScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +26,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://E:/Unity/Hub/Editor/Tuto Unity 2D/Assets/Scripts/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/Fight/DiceData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/Fight/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -63,13 +34,15 @@
       <option value="E:/Unity/Hub/Editor/Tuto Unity 2D/Assets/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/CameraFollow.cs" />
       <option value="$PROJECT_DIR$/Assets/Chest.cs" />
-      <option value="$PROJECT_DIR$/Assets/03_Scripts/Chest.cs" />
       <option value="$PROJECT_DIR$/Assets/HealthBar.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/Fight/DiceData.cs" />
       <option value="$PROJECT_DIR$/Assets/Inventory.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/PickUpDice.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/PlayerHealth.cs" />
+      <option value="$PROJECT_DIR$/Assets/03_Scripts/Chest.cs" />
+      <option value="$PROJECT_DIR$/Assets/EnnemyScriptOW.cs" />
+      <option value="$PROJECT_DIR$/Assets/03_Scripts/EnnemyScriptOW.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rtwRwvAnzcFHvX8BUAPQnUiz9Q" />
@@ -121,6 +94,7 @@
       <workItem from="1619808702967" duration="934000" />
       <workItem from="1619813699908" duration="13009000" />
       <workItem from="1619861825635" duration="811000" />
+      <workItem from="1619875410501" duration="2422000" />
     </task>
     <servers />
   </component>
