@@ -6,7 +6,7 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SlideFade
+  m_Name: SlideRoundFade
   m_Controller: {fileID: 9100000, guid: b87fd99e620a4440daa61317ac9aac3e, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: a22a092e4c86647ddb32fa3b4ff64848, type: 2}
