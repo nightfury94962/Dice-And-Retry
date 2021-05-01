@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private PauseManager pauseScreen;
 
+    [SerializeField] private GameObject combatDataPrefab;
+
     [SerializeField] private Animator transition;
-    private float transitionTime = 5f;
+    private float transitionTime = 1f;
 
     public static bool isPause;
     public static bool isGameOver;
@@ -54,8 +56,21 @@ public class GameManager : MonoBehaviour
         pauseScreen.ShowPauseScreen(PauseManager.TypeOfPause.GameOver, true);
     }
 
-    public void LoadCombatScene()
+    public void LoadCombatScene(EnnemyScriptOW enemy)
     {
+        // Stop musique du jeu
+        GameObject music = GameObject.FindGameObjectWithTag("Music");
+        if (music != null)
+        {
+            AudioSource[] musics = music.GetComponents<AudioSource>();
+            foreach (AudioSource m in musics)
+                m.Stop();
+        }
+
+        GameObject go = Instantiate(combatDataPrefab);
+        FightData fightData = go.GetComponent<FightData>();
+        fightData.Setup();
+
         transition.gameObject.SetActive(true);
         StartCoroutine(StartGame("Combat"));
     }

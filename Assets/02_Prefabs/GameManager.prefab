@@ -44,3 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseScreen: {fileID: 0}
+  combatDataPrefab: {fileID: 4609086624799459892, guid: ed5be42b3217a4b708445bf98acda222,
+    type: 3}
+  transition: {fileID: 0}
