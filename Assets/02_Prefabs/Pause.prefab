@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 3228106520984333514}
   m_Layer: 5
   m_Name: Pause
-  m_TagString: Untagged
+  m_TagString: Pause
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3228106520984333513
 RectTransform:
   m_ObjectHideFlags: 0
@@ -94,6 +94,7 @@ MonoBehaviour:
   panel: {fileID: 3228106520984333512}
   title: {fileID: 3228106522655444234}
   buttonResume: {fileID: 3228106521193432870}
+  transition: {fileID: 0}
 --- !u!1 &3228106521193432870
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,12 @@ using UnityEngine;
 public class PlayerControler : Controler
 {
 	public EntityMotor motor;
+
+	private void Start()
+	{
+		motor.dices = Player.instence.dice;
+		motor.life = Player.instence.life;
+	}
 	void Update()
 	{
 

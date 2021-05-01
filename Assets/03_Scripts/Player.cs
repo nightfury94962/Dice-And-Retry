@@ -9,9 +9,12 @@ public class Player : MonoBehaviour
 	public static Player instence;
 
 	public IventoryManager inventory;
+
+	public int life;
 	private void Awake()
 	{
 		instence = this;
+		life = 100;
 	}
 
 	private void Start()

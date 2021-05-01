@@ -16,6 +16,9 @@ public class EnemyControler : Controler
 
 	private void Start()
 	{
+		Debug.Log(FightData.instance);
+		enemyData = FightData.instance.enemyData;
+		Debug.Log(enemyData);
 		gfx.sprites = enemyData.sprites;
 		motor.maxLife = enemyData.life;
 		motor.life = enemyData.life;

@@ -21,16 +21,7 @@ public class EntityMotor : MonoBehaviour
 
 	void Start()
 	{
-		for (int i = 0; i < 15; i++)
-		{
-			if (entity == Entity.player)
-			{
-				if (i == 0)
-					dices.Add(Dice.MakeRandomDice(i == 0 ? Dice.DiceScarcity.Rare : Dice.DiceScarcity.Comun));
-				else
-					dices.Add(Dice.MakeRandomDice());
-			}
-		}
+
 	}
 
 	// Update is called once per frame

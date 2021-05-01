@@ -63,10 +63,7 @@ public class PauseManager : MonoBehaviour
 
     public void Retry()
     {
-        GameManager.isGameOver = false;
-        GameManager.isPause = false;
-
-        StartCoroutine(StartGame("SampleScene"));
+        StartCoroutine(StartGame("TestScene"));
     }
 
     public void Quit()
@@ -81,5 +78,9 @@ public class PauseManager : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(scene);
+        foreach (GameObject _go in GameManager.instance.gameObject.scene.GetRootGameObjects())
+        {
+            Destroy(_go);
+        }
     }
 }

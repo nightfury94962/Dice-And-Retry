@@ -2,91 +2,117 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private PauseManager pauseScreen;
+	public PauseManager pauseScreen;
 
-    [SerializeField] private GameObject combatDataPrefab;
+	[SerializeField] private GameObject combatDataPrefab;
 
-    [SerializeField] private Animator transition;
-    private float transitionTime = 1f;
+	[SerializeField] private Animator transition;
+	private float transitionTime = 1f;
 
-    public static bool isPause;
-    public static bool isGameOver;
+	public static bool isPause;
+	public static bool isGameOver;
 
-    /* Singleton */
-    public static GameManager instance;
+	public string mainScene;
+	public string combatScene = "Combat";
 
-    void Awake()
-    {
-        /* Singleton */
-        if (instance != null)
-        {
-            Debug.LogError("Plus d'une instance GameManager existe!");
-            return;
-        }
 
-        instance = this;
-    }
+	/* Singleton */
+	public static GameManager instance;
 
-    private void Update()
-    {
-        if (isGameOver)
-            return;
+	void Awake()
+	{
+		/* Singleton */
+		//if (instance != null)
+		//{
+		//    Debug.LogError("Plus d'une instance GameManager existe!");
+		//    return;
+		//}
+		instance = this;
+		DontDestroyOnLoad(gameObject);
+		DontDestroyOnLoad(transition.gameObject);
+		DontDestroyOnLoad(pauseScreen.transform.parent.gameObject);
+		SceneManager.LoadScene("Combat", LoadSceneMode.Additive);
+		mainScene = SceneManager.GetActiveScene().name;
+	}
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Pause();
-        }
-    }
+	private void Update()
+	{
+		
+		if (isGameOver)
+			return;
 
-    public void Pause()
-    {
-        pauseScreen.ShowPauseScreen(PauseManager.TypeOfPause.Pause, !isPause);
-    }
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Pause();
+		}
+	}
 
-    public void GameOver()
-    {
-        if (GameManager.isGameOver)
-            return;
+	public void Pause()
+	{
+		pauseScreen.ShowPauseScreen(PauseManager.TypeOfPause.Pause, !isPause);
+	}
 
-        isGameOver = true;
+	public void GameOver()
+	{
+		if (GameManager.isGameOver)
+			return;
 
-        pauseScreen.ShowPauseScreen(PauseManager.TypeOfPause.GameOver, true);
-    }
+		isGameOver = true;
 
-    public void LoadCombatScene(EnnemyScriptOW enemy)
-    {
-        // Stop musique du jeu
-        GameObject music = GameObject.FindGameObjectWithTag("Music");
-        if (music != null)
-        {
-            AudioSource[] musics = music.GetComponents<AudioSource>();
-            foreach (AudioSource m in musics)
-                m.Stop();
-        }
+		pauseScreen.ShowPauseScreen(PauseManager.TypeOfPause.GameOver, true);
+	}
 
-        GameObject go = Instantiate(combatDataPrefab);
-        FightData fightData = go.GetComponent<FightData>();
-        fightData.Setup();
+	public void LoadCombatScene(EnnemyScriptOW enemy)
+	{
+		// Stop musique du jeu
+		GameObject music = GameObject.FindGameObjectWithTag("Music");
+		if (music != null)
+		{
+			AudioSource[] musics = music.GetComponents<AudioSource>();
+			foreach (AudioSource m in musics)
+				m.Stop();
+		}
 
-        transition.gameObject.SetActive(true);
-        StartCoroutine(StartGame("Combat"));
-    }
+		GameObject go = Instantiate(combatDataPrefab);
+		FightData fightData = go.GetComponent<FightData>();
+		fightData.Setup();
+		fightData.enemyData = enemy.enemyData;
+		Destroy(enemy.gameObject);
 
-    public void LoadMainScene()
-    {
-        transition.gameObject.SetActive(true);
-        StartCoroutine(StartGame("TestScene"));
-    }
+		//transition.gameObject.SetActive(true);
+		//StartCoroutine(StartGame("Combat"));
+		SetActiveScene(false);
+		Debug.Log(Player.instence.dice.Count);
+	}
 
-    private IEnumerator StartGame(string scene)
-    {
-        transition.SetTrigger("End");
+	public void LoadMainScene()
+	{
+		Debug.Log("Return to main");
+		SetActiveScene(true);
+	}
 
-        yield return new WaitForSeconds(transitionTime);
+	private IEnumerator StartGame(string scene)
+	{
+		transition.SetTrigger("End");
 
-        SceneManager.LoadScene(scene);
-    }
+		yield return new WaitForSeconds(transitionTime);
+
+		SceneManager.LoadScene(scene);
+	}
+
+	private void SetActiveScene(bool activeMain)
+	{
+		foreach (GameObject _GO in SceneManager.GetSceneByName(activeMain ? mainScene : combatScene).GetRootGameObjects())
+			_GO.SetActive(true);
+
+		foreach (GameObject _GO in SceneManager.GetSceneByName(!activeMain ? mainScene : combatScene).GetRootGameObjects())
+		{
+			_GO.SetActive(false);
+		}
+
+	}
 }

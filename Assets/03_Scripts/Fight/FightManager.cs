@@ -62,6 +62,8 @@ public class FightManager : MonoBehaviour
 		}
 		else
 		{
+			Player.instence.dice = player.dices;
+			Player.instence.life = player.life;
 			GameManager.instance.LoadMainScene();
 		}
 	}

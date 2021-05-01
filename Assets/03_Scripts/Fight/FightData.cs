@@ -4,66 +4,53 @@ using UnityEngine;
 
 public class FightData : MonoBehaviour
 {
-    private AudioSource audioSource;
+	private AudioSource audioSource;
 
-    private static FightData _instance;
-    public static FightData instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = GameObject.FindObjectOfType<FightData>();
+	public static FightData instance;
 
-                //Tell unity not to destroy this object when loading a new scene!
-                DontDestroyOnLoad(_instance.gameObject);
-            }
+	public EnemyData enemyData;
 
-            return _instance;
-        }
-    }
+	void Awake()
+	{
+		if (instance == null)
+		{
+			//If first instance, make me the Singleton
+			instance = this;
+			DontDestroyOnLoad(this);
+		}
 
-    void Awake()
-    {
-        if (_instance == null)
-        {
-            //If first instance, make me the Singleton
-            _instance = this;
-            DontDestroyOnLoad(this);
-        }
+		audioSource = GetComponent<AudioSource>();
+	}
 
-        audioSource = GetComponent<AudioSource>();
-    }
+	private void Update()
+	{
+		if (audioSource == null)
+			return;
 
-    private void Update()
-    {
-        if (audioSource == null)
-            return;
+		if(!audioSource.isPlaying)
+		{
+			GameObject music = GameObject.FindGameObjectWithTag("FightMusic");
+			if (music != null)
+				music.GetComponent<AudioSource>().Play();
+			
+			Destroy();
+		}
+	}
 
-        if(!audioSource.isPlaying)
-        {
-            GameObject music = GameObject.FindGameObjectWithTag("FightMusic");
-            if (music != null)
-                music.GetComponent<AudioSource>().Play();
-            
-            Destroy();
-        }
-    }
-
-    public void Setup()
-    {
-        if(audioSource != null)
-            audioSource.PlayOneShot(audioSource.clip);
+	public void Setup()
+	{
+		if(audioSource != null)
+			audioSource.PlayOneShot(audioSource.clip);
 
 
-    }
+	}
 
-    public void Destroy()
-    {
-        if (_instance == null) return;
-        if (audioSource == null) return;
+	public void Destroy()
+	{
+		if (instance == null) return;
+		if (audioSource == null) return;
 
-        audioSource.Stop();
-        Destroy(audioSource);
-    }
+		audioSource.Stop();
+		Destroy(audioSource);
+	}
 }

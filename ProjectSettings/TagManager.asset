@@ -6,6 +6,8 @@ TagManager:
   tags:
   - InteractUI
   - FightMusic
+  - Music
+  - Pause
   layers:
   - Default
   - TransparentFX
