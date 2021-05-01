@@ -6,10 +6,10 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RoundFace1
+  m_Name: SpiralFade
   m_Controller: {fileID: 9100000, guid: b87fd99e620a4440daa61317ac9aac3e, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: 38e4d65f80a2e4b01921f3305eef03a3, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 38e4d65f80a2e4b01921f3305eef03a3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b8c0816e736a1485cad00af66f91c694, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: a22a092e4c86647ddb32fa3b4ff64848, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: a22a092e4c86647ddb32fa3b4ff64848, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0ddc6aaa2fb62446f962627e82a2d48f, type: 2}
