@@ -3,18 +3,25 @@ using UnityEngine.UI;
 
 public class EnnemyScriptOW : MonoBehaviour
 {
-    private Text interactUI;
     private bool isInRange;
+    public EnemyData enemyData;
+
+    public int spritIndex = 0;
+    public float animationCooldown = 0f;
     
-    private void Awake()
-    {
-        interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
-    }
 
     private void Update()
     {
+        animationCooldown -= Time.deltaTime;
+        if (animationCooldown <= 0f)
+		{
+            animationCooldown = 1f;
+            spritIndex = (spritIndex + 1) % enemyData.sprites.Length;
+            GetComponent<SpriteRenderer>().sprite = enemyData.sprites[spritIndex];
+		}
+
         if (Input.GetKeyDown(KeyCode.E)  && isInRange)
-        {            
+        {
             GameManager.instance.LoadCombatScene(this);
         }
     }
@@ -23,7 +30,7 @@ public class EnnemyScriptOW : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            interactUI.enabled = true;
+            InteractUI.instance.SetText("Appuie sur 'E' pour te battre avec" + enemyData.name);
             isInRange = true;
         }
     }
@@ -32,7 +39,7 @@ public class EnnemyScriptOW : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            interactUI.enabled = false;
+            InteractUI.instance.SetText("");
             isInRange = false;
         }
     }
