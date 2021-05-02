@@ -16,5 +16,6 @@ public class InteractUI : MonoBehaviour
 	public void SetText(string text)
 	{
 		textInfo.text = text;
+		GetComponent<Image>().enabled = text != "";
 	}
 }
