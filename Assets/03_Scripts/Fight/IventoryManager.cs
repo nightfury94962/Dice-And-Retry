@@ -12,6 +12,7 @@ public class IventoryManager : MonoBehaviour
 	public Text throwRemaining;
 
 	public Sprite[] scarcity;
+	public Sprite[] logoSprites;
 	public void RefreshDiceBar(List<Dice> dice, PlayerControler playerControler)
 	{
 		foreach (Transform curChild in diceContente)
@@ -64,6 +65,7 @@ public class IventoryManager : MonoBehaviour
 			_diceGo.transform.SetParent(faceContente);
 			_diceGo.GetComponent<Image>().color = curFace.FaceColor();
 			_diceGo.transform.Find("Text").GetComponent<Text>().text = curFace.value.ToString();
+			_diceGo.GetComponent<Image>().sprite = logoSprites[(int)curFace.type];
 		}
 	}
 }
