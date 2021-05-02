@@ -1753,6 +1753,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1501907461}
+    - target: {fileID: 989399902072805691, guid: c0b9032ac1b2e1e449852987e9c707b2,
+        type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 1501907461}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0b9032ac1b2e1e449852987e9c707b2, type: 3}
 --- !u!1001 &1981136806693805074
