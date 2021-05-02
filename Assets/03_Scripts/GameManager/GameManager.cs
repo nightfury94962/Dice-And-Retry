@@ -84,7 +84,6 @@ public class GameManager : MonoBehaviour
 		//transition.gameObject.SetActive(true);
 		//StartCoroutine(StartGame("Combat"));
 		StartCoroutine(SetActiveScene(false));
-		Debug.Log(Player.instence.dice.Count);
 	}
 
 	public void LoadMainScene()
