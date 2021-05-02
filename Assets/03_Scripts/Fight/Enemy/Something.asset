@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Something
   m_EditorClassIdentifier: 
   name: Something
-  life: 100
+  life: 37
   sprites:
   - {fileID: 21300000, guid: b352914b77dd09b4db79382b08505542, type: 3}
   - {fileID: 21300000, guid: 0e8a51a6461ec66468632b7466ad05a6, type: 3}
   customDice: []
-  randomDiceCount: 050000000200000001000000
+  randomDiceCount: 020000000200000000000000

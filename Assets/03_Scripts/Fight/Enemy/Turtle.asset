@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Turtle
   m_EditorClassIdentifier: 
   name: Turtle
-  life: 50
+  life: 30
   sprites:
   - {fileID: 21300000, guid: fca92423b493cc848951a6528a7d71ab, type: 3}
   - {fileID: 21300000, guid: 4849f1e14e0c7f243913221f685ef4f4, type: 3}
