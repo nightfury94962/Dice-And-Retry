@@ -84,8 +84,12 @@ public class PauseManager : MonoBehaviour
         transition.SetTrigger("End");
 
         GameObject go = GameObject.FindGameObjectWithTag("Music");
-        if(go != null)
-            go.GetComponent<MusicManager>().Stop(); // Stopper la musique
+        if (go != null)
+        {
+            MusicManager music = go.GetComponent<MusicManager>();
+            if (music != null)
+                music.Stop(); // Stopper la musique
+        }
 
         yield return new WaitForSeconds(transitionTime);
 

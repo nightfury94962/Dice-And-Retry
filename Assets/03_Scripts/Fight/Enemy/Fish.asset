@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Fish
   m_EditorClassIdentifier: 
   name: Fish
-  life: 80
+  life: 15
   sprites:
   - {fileID: 21300000, guid: dfc9e2014b3fa34428b162624c26015d, type: 3}
   - {fileID: 21300000, guid: 86670b2bdac5c2945af34b24b6a6eac5, type: 3}
   customDice: []
-  randomDiceCount: 020000000300000000000000
+  randomDiceCount: 0200000000000000

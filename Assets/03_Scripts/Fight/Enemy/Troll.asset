@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Troll
   m_EditorClassIdentifier: 
   name: Troll
-  life: 200
+  life: 42
   sprites:
   - {fileID: 21300000, guid: 24381e856c2050a40bcf432c320f2c42, type: 3}
   - {fileID: 21300000, guid: 78998257359edac4886381d07d673202, type: 3}
