@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b9255bf-7c5f-4f80-a5a9-5cc4908e5d95" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/04_Scenes/Player.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/04_Scenes/Player.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation/Die.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation/Die.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation/Sprite.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation/Sprite.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Fight/Die.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Fight/Die.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Fight/Player.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Fight/Player.controller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dice-And-Retry/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dice-And-Retry/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityMotor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityMotor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityMotor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Fight/PlayerControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Fight/PlayerControler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02_Prefabs/Fight/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Prefabs/Fight/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02_Prefabs/Fight/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02_Prefabs/Fight/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityGFX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityGFX.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Fight/FightManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Fight/FightManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/04_Scenes/Combat.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/04_Scenes/Combat.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +49,8 @@
       <option value="$PROJECT_DIR$/Assets/Inventory.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityMotor.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/Fight/PlayerControler.cs" />
+      <option value="$PROJECT_DIR$/Assets/03_Scripts/Fight/FightManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityGFX.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rtwRwvAnzcFHvX8BUAPQnUiz9Q" />
@@ -89,7 +103,7 @@
       <workItem from="1619813699908" duration="13009000" />
       <workItem from="1619861825635" duration="811000" />
       <workItem from="1619875410501" duration="6614000" />
-      <workItem from="1619943666487" duration="2357000" />
+      <workItem from="1619943666487" duration="4345000" />
     </task>
     <servers />
   </component>

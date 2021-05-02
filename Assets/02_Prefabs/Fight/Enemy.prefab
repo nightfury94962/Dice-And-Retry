@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   motor: {fileID: 4021882655175421788}
-  enemyData: {fileID: 11400000, guid: bbc0c03b97e69fe4aaa61444536116ce, type: 2}
+  enemyData: {fileID: 11400000, guid: ddecbe4c6a96c3549aeaa2d4f747e0c5, type: 2}
   gfx: {fileID: 3749994669449716642}
 --- !u!1 &4021882655207036254
 GameObject:
@@ -230,6 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites: []
   spriteRenderer: {fileID: 8946685394567324723}
+  animation: {fileID: 8863799133237847439}
   damageIndicator: {fileID: 6325862604710654504}
 --- !u!1 &4665976107765334417
 GameObject:
@@ -241,6 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7567185162411259318}
   - component: {fileID: 8946685394567324723}
+  - component: {fileID: 8863799133237847439}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -306,12 +308,27 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &8863799133237847439
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4665976107765334417}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: c76aec6de3d2a9a48b0f70b737d52ce8, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6917507258817509538
 GameObject:
   m_ObjectHideFlags: 0
