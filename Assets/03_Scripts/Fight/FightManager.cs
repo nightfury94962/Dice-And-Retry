@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 public class FightManager : MonoBehaviour
 {
+	[SerializeField] private Animator transition;
+	private float transitionTime = 1f;
+
 	public EntityMotor.Entity entityTurn = EntityMotor.Entity.none;
 
 	public EntityMotor player;
@@ -84,13 +87,23 @@ public class FightManager : MonoBehaviour
 		}
 		else
 		{
-			Player.instence.dices = player.dices;
-			Player.instence.life = player.life;
-			Dice _dice = enemy.dices[Random.Range(0, enemy.dices.Count)];
-			_dice.throwRemaining = Random.Range(2, 7);
-			Player.instence.AddDice(_dice);
-			GameManager.instance.LoadMainScene();
+			StartCoroutine(LoadMainScene());
 		}
+	}
+
+	IEnumerator LoadMainScene()
+	{
+		transition.gameObject.SetActive(true);
+		transition.SetTrigger("End");
+
+		yield return new WaitForSeconds(transitionTime);
+
+		Player.instence.dices = player.dices;
+		Player.instence.life = player.life;
+		Dice _dice = enemy.dices[Random.Range(0, enemy.dices.Count)];
+		_dice.throwRemaining = Random.Range(2, 7);
+		Player.instence.AddDice(_dice);
+		GameManager.instance.LoadMainScene();
 	}
 
 }
