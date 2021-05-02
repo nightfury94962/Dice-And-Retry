@@ -17,5 +17,6 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: ba2565929fa898f449af50c1cdc096d1, type: 3}
   - {fileID: 21300000, guid: ccc2aa229b6465e4b89c765b4d01a5f6, type: 3}
-  customDice: []
-  randomDiceCount: 030000000000000000000000
+  customDice:
+  - {fileID: 11400000, guid: c7166c31fefc2e9478cd5419d101ad9a, type: 2}
+  randomDiceCount: 020000000000000000000000
