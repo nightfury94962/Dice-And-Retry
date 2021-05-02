@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bafb3e41179b459bb0cb4ef1a86c554, type: 3}
   m_Name: Heal
   m_EditorClassIdentifier: 
-  scarcity: 1
+  scarcity: 2
   throwQuantity: 3
   value: 32000000280000001e0000001e0000000a000000
   facesType: 010000000100000001000000
