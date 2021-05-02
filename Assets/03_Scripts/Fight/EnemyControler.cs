@@ -22,6 +22,7 @@ public class EnemyControler : Controler
 		motor.maxLife = enemyData.life;
 		motor.life = enemyData.life;
 
+		motor.dices = new List<Dice>();
 		foreach (DiceData curDiceData in enemyData.customDice)
 		{
 			motor.dices.Add(Dice.MakeDice(curDiceData));
