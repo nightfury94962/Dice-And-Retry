@@ -31,4 +31,14 @@ public class MenuManager : MonoBehaviour
     {
         settings.SetActive(true);
     }
+
+    public void Credits()
+    {
+        Settings.instance.SaveSettings();
+
+        transition.gameObject.SetActive(true);
+
+        // Lancer la Scene: MainScene
+        StartCoroutine(StartGame("Credits"));
+    }
 }
