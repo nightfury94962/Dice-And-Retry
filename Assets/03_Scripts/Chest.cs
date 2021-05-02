@@ -15,6 +15,7 @@ public class Chest : MonoBehaviour
 
 	public DiceData[] customDices;
 	public Dice.DiceScarcity[] randomDices;
+	public int diceLoot = 1;
 
 	private void Awake()
 	{
@@ -57,12 +58,14 @@ public class Chest : MonoBehaviour
 	{
 		audioSource.PlayOneShot(OpenChestSound);
 		GetComponent<SpriteRenderer>().sprite = chestOpen;
-		if (Random.value < customDices.Length / (float)(customDices.Length + randomDices.Length))
-			Player.instence.dice.Add(Dice.MakeDice(customDices[Random.Range(0, customDices.Length)]));
-		else
-			Player.instence.dice.Add(Dice.MakeRandomDice(randomDices[Random.Range(0, randomDices.Length)]));
+		for (int i = 0; i < diceLoot; i++)
+		{
+			if (Random.value < customDices.Length / (float)(customDices.Length + randomDices.Length))
+				Player.instence.AddDice(Dice.MakeDice(customDices[Random.Range(0, customDices.Length)]));
+			else
+				Player.instence.AddDice(Dice.MakeRandomDice(randomDices[Random.Range(0, randomDices.Length)]));
+		}
 
-		Player.instence.inventory.RefreshDiceBar(Player.instence.dice, null);
 
 		isOpen = true;
 		InteractUI.instance.SetText("");

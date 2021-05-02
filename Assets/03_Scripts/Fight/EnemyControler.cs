@@ -14,11 +14,11 @@ public class EnemyControler : Controler
 
 	private float attackCoolDown;
 
-	private void Start()
+	private void OnEnable()
 	{
-		Debug.Log(FightData.instance);
+		if (FightData.instance == null)
+			return;
 		enemyData = FightData.instance.enemyData;
-		Debug.Log(enemyData);
 		gfx.sprites = enemyData.sprites;
 		motor.maxLife = enemyData.life;
 		motor.life = enemyData.life;
@@ -83,6 +83,11 @@ public class EnemyControler : Controler
 			{
 				motor.myTurn = false;
 			}
+		}
+
+		if (Input.GetKeyDown(KeyCode.L))
+		{
+			motor.life = 0;
 		}
 	}
 }

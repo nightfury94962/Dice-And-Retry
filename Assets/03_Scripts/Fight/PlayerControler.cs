@@ -6,9 +6,11 @@ public class PlayerControler : Controler
 {
 	public EntityMotor motor;
 
-	private void Start()
+	private void OnEnable()
 	{
-		motor.dices = Player.instence.dice;
+		if (FightData.instance == null)
+			return;
+		motor.dices = Player.instence.dices;
 		motor.life = Player.instence.life;
 	}
 	void Update()

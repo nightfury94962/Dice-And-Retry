@@ -16,9 +16,10 @@ public class UIManager : MonoBehaviour
 
 	public IventoryManager inventory;
 
-	private void Awake()
+	private void OnEnable()
 	{
-		instance = this;
+		if (instance == null)
+			instance = this;
 	}
 
 	// Update is called once per frame

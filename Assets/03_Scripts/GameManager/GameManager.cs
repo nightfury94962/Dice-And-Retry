@@ -95,6 +95,16 @@ public class GameManager : MonoBehaviour
 		Destroy(FightData.instance.gameObject);
 	}
 
+	public void LoadRealGameOver()
+	{
+		SceneManager.LoadScene("");
+
+		foreach (GameObject _go in gameObject.scene.GetRootGameObjects())
+		{
+			Destroy(_go);
+		}
+	}
+
 	private IEnumerator SetActiveScene(bool activeMain)
 	{
 		if (transition != null)

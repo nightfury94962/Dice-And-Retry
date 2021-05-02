@@ -11,9 +11,14 @@ public class EntityGFX : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     public Text damageIndicator;
-     
-    // Update is called once per frame
-    void Update()
+
+	private void OnEnable()
+	{
+        GetComponent<Animation>().Stop();
+	}
+
+	// Update is called once per frame
+	void Update()
     {
         animationCooldown -= Time.deltaTime;
         if (animationCooldown <= 0f)

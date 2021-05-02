@@ -16,29 +16,38 @@ public class FightManager : MonoBehaviour
 
 	public bool fightFinish = false;
 
+	public EnemyData boss;
+
 	private void Awake()
 	{
 		instance = this;
-	}
 
-	void Start()
-	{
 		player.entity = EntityMotor.Entity.player;
 		player.enemy = enemy;
 
 		enemy.entity = EntityMotor.Entity.enemy;
 		enemy.enemy = player;
 
+	}
+
+	void OnEnable()
+	{
+		if (FightData.instance == null)
+			return;
 		entityTurn = EntityMotor.Entity.player;
+		player.life = 1;
+		enemy.life = 1;
+		fightFinish = false;
 		AsyncTask.MonitorTask(AsyncUpdate());
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-
-		if (player.life == 0 || enemy.life == 0f)
+		if ((player.life == 0 || enemy.life == 0f) && (player.myTurn || enemy.myTurn))
 		{
+			Debug.Log("Enemy Life " + enemy.life.ToString());
+			Debug.Log("Player Life " + player.life.ToString());
 			fightFinish = true;
 			player.myTurn = false;
 			enemy.myTurn = false;
@@ -56,14 +65,22 @@ public class FightManager : MonoBehaviour
 		}
 		Debug.Log("Game Over");
 		await Task.Delay(1000);
-		if (player.life == 0)
+
+		if (((EnemyControler)enemy.controler).enemyData == boss)
+		{
+
+		}
+		else if (player.life == 0)
 		{
 			GameManager.instance.GameOver();
 		}
 		else
 		{
-			Player.instence.dice = player.dices;
+			Player.instence.dices = player.dices;
 			Player.instence.life = player.life;
+			Dice _dice = enemy.dices[Random.Range(0, enemy.dices.Count)];
+			_dice.throwRemaining = Random.Range(2, 7);
+			Player.instence.AddDice(_dice);
 			GameManager.instance.LoadMainScene();
 		}
 	}

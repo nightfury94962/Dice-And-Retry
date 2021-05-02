@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-	public List<Dice> dice = new List<Dice>();
+	public List<Dice> dices = new List<Dice>();
 
 	public static Player instence;
 
 	public IventoryManager inventory;
+
+	public const int inventorySize = 10;
 
 	public int life;
 	private void Awake()
@@ -19,7 +21,17 @@ public class Player : MonoBehaviour
 
 	private void Start()
 	{
-		inventory.RefreshDiceBar(dice, null);
+		inventory.RefreshDiceBar(dices, null);
+	}
+
+	public void AddDice(Dice dice)
+	{
+		if (dices.Count == inventorySize)
+		{
+			dices.RemoveAt(Random.Range(0, dices.Count));
+		}
+		dices.Insert(Random.Range(0, dices.Count), dice);
+		inventory.RefreshDiceBar(dices, null);
 	}
 
 	// Update is called once per frame
