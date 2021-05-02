@@ -68,12 +68,29 @@ public class Settings : MonoBehaviour
         }
 
         Screen.fullScreen = isFullScreen;
+        if (Screen.fullScreen)
+        {
+            Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+        }
+        else
+        {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+        }
     }
 
     public void SetFullScreen(bool _isFullScreen)
     {
         Screen.fullScreen = _isFullScreen;
         isFullScreen = _isFullScreen;
+
+        if (Screen.fullScreen)
+        {
+            Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+        }
+        else
+        {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+        }
     }
 
     public void MusicVolume(float _volume)
