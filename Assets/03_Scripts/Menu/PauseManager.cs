@@ -73,6 +73,9 @@ public class PauseManager : MonoBehaviour
 
     public void Quit()
     {
+        GameManager.isGameOver = false;
+        GameManager.isPause = false;
+
         StartCoroutine(StartGame("Menu"));
     }
 

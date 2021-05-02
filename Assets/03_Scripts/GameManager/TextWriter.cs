@@ -20,6 +20,7 @@ public class TextWriter : MonoBehaviour
     private float timer;
     private string sceneName;
     private bool onComplete;
+    private bool skipped = false;
 
     public void AddWriter(Text uiText, string[] textToWrite, float timePerCharacter, string sceneName)
     {
@@ -35,6 +36,9 @@ public class TextWriter : MonoBehaviour
 
     private void Update()
     {
+        if (skipped)
+            return;
+
         // A n'import quel touche
         if (Input.GetMouseButtonDown(0) ||
             Input.GetMouseButtonDown(1) ||
@@ -92,5 +96,12 @@ public class TextWriter : MonoBehaviour
 
         SceneManager.LoadScene(scene);
         GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().Stop(); // Stopper la musique
+    }
+
+    public void Skip()
+    {
+        skipped = true;
+        transition.gameObject.SetActive(true);
+        StartCoroutine(StartGame(this.sceneName)); // Charger la scene suivante
     }
 }
