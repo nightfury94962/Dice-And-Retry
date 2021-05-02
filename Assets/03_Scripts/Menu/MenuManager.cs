@@ -41,4 +41,9 @@ public class MenuManager : MonoBehaviour
         // Lancer la Scene: MainScene
         StartCoroutine(StartGame("Credits"));
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
