@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Door
   m_EditorClassIdentifier: 
   name: Door
-  life: 99999999
+  life: 999999
   sprites:
   - {fileID: 21300000, guid: ccbcfd1c575dcca4caaa4cd8f15f914e, type: 3}
   customDice:
