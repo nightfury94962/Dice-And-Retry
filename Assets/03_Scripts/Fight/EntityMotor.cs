@@ -46,6 +46,7 @@ public class EntityMotor : MonoBehaviour
 		{
 			await Task.Delay(1);
 		}
+		ResetDice();
 		Debug.LogFormat("{0} Finish Play", entity);
 	}
 

@@ -19,26 +19,33 @@ public class FightManager : MonoBehaviour
 	private void Awake()
 	{
 		instance = this;
-	}
 
-	void Start()
-	{
 		player.entity = EntityMotor.Entity.player;
 		player.enemy = enemy;
 
 		enemy.entity = EntityMotor.Entity.enemy;
 		enemy.enemy = player;
 
+	}
+
+	void OnEnable()
+	{
+		if (FightData.instance == null)
+			return;
 		entityTurn = EntityMotor.Entity.player;
+		player.life = 1;
+		enemy.life = 1;
+		fightFinish = false;
 		AsyncTask.MonitorTask(AsyncUpdate());
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-
-		if (player.life == 0 || enemy.life == 0f)
+		if ((player.life == 0 || enemy.life == 0f) && (player.myTurn || enemy.myTurn))
 		{
+			Debug.Log("Enemy Life " + enemy.life.ToString());
+			Debug.Log("Player Life " + player.life.ToString());
 			fightFinish = true;
 			player.myTurn = false;
 			enemy.myTurn = false;

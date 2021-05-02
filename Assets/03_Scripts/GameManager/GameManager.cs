@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
 	{
 		Debug.Log("Return to main");
 		SetActiveScene(true);
+		Destroy(FightData.instance.gameObject);
 	}
 
 	private IEnumerator StartGame(string scene)
