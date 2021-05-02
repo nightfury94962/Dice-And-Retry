@@ -8050,6 +8050,7 @@ MonoBehaviour:
   OpenChestSound: {fileID: 0}
   customDices: []
   randomDices: 
+  diceLoot: 1
 --- !u!1001 &1989734796
 PrefabInstance:
   m_ObjectHideFlags: 0

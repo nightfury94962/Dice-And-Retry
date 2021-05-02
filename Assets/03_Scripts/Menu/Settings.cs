@@ -105,8 +105,16 @@ public class Settings : MonoBehaviour
         soundsEffect = _volume;
     }
 
+    public void ShowSettings()
+    {
+        settingsScreen.SetActive(true);
+    }
+
     public void CloseAndSaveSettings()
     {
+        if (!settingsScreen.activeSelf)
+            return;
+
         SaveSettings();
         settingsScreen.SetActive(false);
     }
