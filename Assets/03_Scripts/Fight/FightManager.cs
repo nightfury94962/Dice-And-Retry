@@ -66,8 +66,11 @@ public class FightManager : MonoBehaviour
 		Debug.Log("Game Over");
 		await Task.Delay(1000);
 
-		if (((EnemyControler)enemy.controler).enemyData == boss) ;
-		if else (player.life == 0)
+		if (((EnemyControler)enemy.controler).enemyData == boss)
+		{
+
+		}
+		else if (player.life == 0)
 		{
 			GameManager.instance.GameOver();
 		}
