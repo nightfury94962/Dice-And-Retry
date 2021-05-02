@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -12,16 +13,17 @@ public class Player : MonoBehaviour
 
 	public const int inventorySize = 10;
 
-	public int life;
+	public int life = 100;
 	private void Awake()
 	{
 		instence = this;
-		life = 100;
+		Debug.LogError("Console");
 	}
 
 	private void Start()
 	{
 		inventory.RefreshDiceBar(dices, null);
+		life = 100;
 	}
 
 	public void AddDice(Dice dice)
@@ -37,6 +39,6 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		
+
 	}
 }

@@ -8,4 +8,9 @@ public class Controler : MonoBehaviour
 	{
 
 	}
+
+	public virtual void Init()
+	{
+
+	}
 }

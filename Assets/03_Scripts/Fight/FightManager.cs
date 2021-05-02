@@ -35,8 +35,8 @@ public class FightManager : MonoBehaviour
 		if (FightData.instance == null)
 			return;
 		entityTurn = EntityMotor.Entity.player;
-		player.life = 1;
-		enemy.life = 1;
+		player.Init();
+		enemy.Init();
 		fightFinish = false;
 		AsyncTask.MonitorTask(AsyncUpdate());
 	}

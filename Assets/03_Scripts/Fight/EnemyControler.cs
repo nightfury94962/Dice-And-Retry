@@ -14,7 +14,7 @@ public class EnemyControler : Controler
 
 	private float attackCoolDown;
 
-	private void OnEnable()
+	public override void Init()
 	{
 		if (FightData.instance == null)
 			return;

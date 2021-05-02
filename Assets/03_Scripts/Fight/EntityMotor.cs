@@ -30,6 +30,11 @@ public class EntityMotor : MonoBehaviour
 		
 	}
 
+	public void Init()
+	{
+		controler.Init();
+	}
+
 	public async Task YourTurn()
 	{
 		await Play();

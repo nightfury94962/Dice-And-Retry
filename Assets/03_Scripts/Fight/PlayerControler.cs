@@ -9,12 +9,17 @@ public class PlayerControler : Controler
 
 	public EntityMotor motor;
 
-	private void OnEnable()
+	public override void Init()
 	{
 		if (FightData.instance == null)
 			return;
 		motor.dices = Player.instence.dices;
 		motor.life = Player.instence.life;
+		Debug.Log("Enable " + Player.instence.life);
+	}
+
+	public void Start()
+	{
 	}
 	void Update()
 	{
