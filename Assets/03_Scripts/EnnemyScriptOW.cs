@@ -8,7 +8,10 @@ public class EnnemyScriptOW : MonoBehaviour
 
     public int spritIndex = 0;
     public float animationCooldown = 0f;
-    
+
+    public AudioSource audioSource;
+    public AudioClip IDLESoundMonster;
+
 
     private void Update()
     {
@@ -36,6 +39,9 @@ public class EnnemyScriptOW : MonoBehaviour
                 InteractUI.instance.SetText("Tu aura du mal a combatre " + enemyData.name + " sans dé");
 
             isInRange = true;
+
+            audioSource.Play();
+            audioSource.PlayOneShot(IDLESoundMonster);
         }
     }
     
