@@ -10,7 +10,7 @@ public class PlayerControler : Controler
 	{
 		if (FightData.instance == null)
 			return;
-		motor.dices = Player.instence.dice;
+		motor.dices = Player.instence.dices;
 		motor.life = Player.instence.life;
 	}
 	void Update()

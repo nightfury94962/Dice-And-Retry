@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
 		//transition.gameObject.SetActive(true);
 		//StartCoroutine(StartGame("Combat"));
 		SetActiveScene(false);
-		Debug.Log(Player.instence.dice.Count);
+		Debug.Log(Player.instence.dices.Count);
 	}
 
 	public void LoadMainScene()
@@ -94,6 +94,16 @@ public class GameManager : MonoBehaviour
 		Debug.Log("Return to main");
 		SetActiveScene(true);
 		Destroy(FightData.instance.gameObject);
+	}
+
+	public void LoadRealGameOver()
+	{
+		SceneManager.LoadScene("");
+
+		foreach (GameObject _go in gameObject.scene.GetRootGameObjects())
+		{
+			Destroy(_go);
+		}
 	}
 
 	private IEnumerator StartGame(string scene)

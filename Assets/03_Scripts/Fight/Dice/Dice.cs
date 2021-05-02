@@ -44,7 +44,7 @@ public class Dice
 		int maxValue = 0;
 		float malusChance = 0;
 
-		dice.throwRemaining = Random.value > 0.60f ? Random.Range(2, 10): -1;
+		dice.throwRemaining = Random.value > 0.5f ? Random.Range(2, 10): -1;
 
 		switch(_scarcity)
 		{

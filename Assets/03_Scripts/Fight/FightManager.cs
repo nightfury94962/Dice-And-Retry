@@ -16,6 +16,8 @@ public class FightManager : MonoBehaviour
 
 	public bool fightFinish = false;
 
+	public EnemyData boss;
+
 	private void Awake()
 	{
 		instance = this;
@@ -63,14 +65,19 @@ public class FightManager : MonoBehaviour
 		}
 		Debug.Log("Game Over");
 		await Task.Delay(1000);
-		if (player.life == 0)
+
+		if (((EnemyControler)enemy.controler).enemyData == boss) ;
+		if else (player.life == 0)
 		{
 			GameManager.instance.GameOver();
 		}
 		else
 		{
-			Player.instence.dice = player.dices;
+			Player.instence.dices = player.dices;
 			Player.instence.life = player.life;
+			Dice _dice = enemy.dices[Random.Range(0, enemy.dices.Count)];
+			_dice.throwRemaining = Random.Range(2, 7);
+			Player.instence.AddDice(_dice);
 			GameManager.instance.LoadMainScene();
 		}
 	}
