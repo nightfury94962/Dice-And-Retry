@@ -19,4 +19,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f8555e2a37a1ca94ca13bf2b2233aaaf, type: 3}
   customDice:
   - {fileID: 11400000, guid: 078e238b7fc786f48baffe83ae32c475, type: 2}
-  randomDiceCount: 000000000400000000000000
+  randomDiceCount: 020000000000000000000000
