@@ -9,20 +9,17 @@ public class EntityGFX : MonoBehaviour
     private int spriteIndex;
     private float animationCooldown;
     public SpriteRenderer spriteRenderer;
-    public Animation animation;
+    public Animator animation;
 
     public Text damageIndicator;
 
 	private void OnEnable()
 	{
-        GetComponent<Animation>().Stop();
 	}
 
 	public void Die()
 	{
-		Debug.LogWarning("Mort");
-		animationCooldown = 9999;
-		animation.Play();
+
 	}
 	
 	// Update is called once per frame

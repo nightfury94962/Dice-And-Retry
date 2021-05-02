@@ -11,8 +11,6 @@ public class PlayerControler : Controler
 
 	public override void Init()
 	{
-		if (FightData.instance == null)
-			return;
 		motor.dices = Player.instence.dices;
 		motor.life = Player.instence.life;
 		Debug.Log("Enable " + Player.instence.life);

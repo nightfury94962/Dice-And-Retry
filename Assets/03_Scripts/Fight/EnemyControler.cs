@@ -16,9 +16,8 @@ public class EnemyControler : Controler
 
 	public override void Init()
 	{
-		if (FightData.instance == null)
-			return;
 		enemyData = FightData.instance.enemyData;
+		Debug.Log(enemyData);
 		gfx.sprites = enemyData.sprites;
 		motor.maxLife = enemyData.life;
 		motor.life = enemyData.life;
