@@ -14,8 +14,10 @@ public class Panel : MonoBehaviour
         {
             InteractUI.instance.SetText(message);
 
-            audioSource.Play();
-            audioSource.PlayOneShot(pierreSoundEffect);
+            if(audioSource != null & pierreSoundEffect != null)
+            {
+                audioSource.PlayOneShot(pierreSoundEffect);
+            }
         }
     }
 
