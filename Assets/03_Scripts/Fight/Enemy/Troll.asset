@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018036f5ccef7864d9f095764e4b1206, type: 3}
   m_Name: Troll
   m_EditorClassIdentifier: 
-  name: Troll
+  name: Une Troll
   life: 42
   sprites:
   - {fileID: 21300000, guid: 24381e856c2050a40bcf432c320f2c42, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018036f5ccef7864d9f095764e4b1206, type: 3}
   m_Name: Door
   m_EditorClassIdentifier: 
-  name: Door
+  name: La Porte
   life: 999999
   sprites:
   - {fileID: 21300000, guid: ccbcfd1c575dcca4caaa4cd8f15f914e, type: 3}

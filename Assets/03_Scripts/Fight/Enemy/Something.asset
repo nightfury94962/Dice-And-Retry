@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018036f5ccef7864d9f095764e4b1206, type: 3}
   m_Name: Something
   m_EditorClassIdentifier: 
-  name: Something
+  name: Un Chose
   life: 37
   sprites:
   - {fileID: 21300000, guid: b352914b77dd09b4db79382b08505542, type: 3}

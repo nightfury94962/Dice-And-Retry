@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018036f5ccef7864d9f095764e4b1206, type: 3}
   m_Name: Fish
   m_EditorClassIdentifier: 
-  name: Fish
+  name: Le Poisson a Coquille
   life: 15
   sprites:
   - {fileID: 21300000, guid: dfc9e2014b3fa34428b162624c26015d, type: 3}

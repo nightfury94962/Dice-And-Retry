@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018036f5ccef7864d9f095764e4b1206, type: 3}
   m_Name: Virus
   m_EditorClassIdentifier: 
-  name: Door
+  name: Le Covid
   life: 50
   sprites:
   - {fileID: 21300000, guid: 69c8c92ec2fea8243ac772ee588c901b, type: 3}
