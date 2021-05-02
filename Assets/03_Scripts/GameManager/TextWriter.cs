@@ -95,7 +95,9 @@ public class TextWriter : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(scene);
-        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().Stop(); // Stopper la musique
+
+        if(SceneManager.GetActiveScene().name == "Introduction")
+            GameObject.FindGameObjectWithTag("Music").GetComponent<MusicManager>().Stop(); // Stopper la musique
     }
 
     public void Skip()
