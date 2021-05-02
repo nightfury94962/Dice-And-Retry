@@ -1,8 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEditor.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -85,34 +83,35 @@ public class GameManager : MonoBehaviour
 
 		//transition.gameObject.SetActive(true);
 		//StartCoroutine(StartGame("Combat"));
-		SetActiveScene(false);
+		StartCoroutine(SetActiveScene(false));
 		Debug.Log(Player.instence.dice.Count);
 	}
 
 	public void LoadMainScene()
 	{
 		Debug.Log("Return to main");
-		SetActiveScene(true);
+		StartCoroutine(SetActiveScene(true));
+
+		Destroy(FightData.instance.gameObject);
 	}
 
-	private IEnumerator StartGame(string scene)
+	private IEnumerator SetActiveScene(bool activeMain)
 	{
-		transition.SetTrigger("End");
+		if (transition != null)
+		{
+			transition.gameObject.SetActive(true);
+			transition.SetTrigger("End");
+		}
 
 		yield return new WaitForSeconds(transitionTime);
 
-		SceneManager.LoadScene(scene);
-	}
-
-	private void SetActiveScene(bool activeMain)
-	{
 		foreach (GameObject _GO in SceneManager.GetSceneByName(activeMain ? mainScene : combatScene).GetRootGameObjects())
 			_GO.SetActive(true);
 
 		foreach (GameObject _GO in SceneManager.GetSceneByName(!activeMain ? mainScene : combatScene).GetRootGameObjects())
-		{
 			_GO.SetActive(false);
-		}
 
+		if (transition != null)
+			transition.gameObject.SetActive(false);
 	}
 }
