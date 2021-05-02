@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b9255bf-7c5f-4f80-a5a9-5cc4908e5d95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/02_Prefabs/Ennemy.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02_Prefabs/Ennemy.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/03_Scripts/EnnemyScriptOW.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/03_Scripts/EnnemyScriptOW.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation/Ennemy.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation/Ennemy.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation/Ennemy_Neutre_Idle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/06_Animations/Ennemy_Animation/Ennemy_Neutre_Idle.anim.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dice-And-Retry/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dice-And-Retry/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/04_Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/04_Scenes/TestScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/04_Scenes/TestScene.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityMotor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityMotor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityMotor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03_Scripts/Fight/PlayerControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03_Scripts/Fight/PlayerControler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +19,7 @@
     <setting file="file://E:/Unity/Hub/Editor/Tuto Unity 2D/Assets/Scripts/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/Fight/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/03_Scripts/Fight/IventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -36,13 +28,15 @@
       <option value="$PROJECT_DIR$/Assets/Chest.cs" />
       <option value="$PROJECT_DIR$/Assets/HealthBar.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/Fight/DiceData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Inventory.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/PickUpDice.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/PlayerHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/Chest.cs" />
       <option value="$PROJECT_DIR$/Assets/EnnemyScriptOW.cs" />
       <option value="$PROJECT_DIR$/Assets/03_Scripts/EnnemyScriptOW.cs" />
+      <option value="$PROJECT_DIR$/Assets/Inventory.cs" />
+      <option value="$PROJECT_DIR$/Assets/03_Scripts/Fight/EntityMotor.cs" />
+      <option value="$PROJECT_DIR$/Assets/03_Scripts/Fight/PlayerControler.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1rtwRwvAnzcFHvX8BUAPQnUiz9Q" />
@@ -94,7 +88,8 @@
       <workItem from="1619808702967" duration="934000" />
       <workItem from="1619813699908" duration="13009000" />
       <workItem from="1619861825635" duration="811000" />
-      <workItem from="1619875410501" duration="2422000" />
+      <workItem from="1619875410501" duration="6614000" />
+      <workItem from="1619943666487" duration="2357000" />
     </task>
     <servers />
   </component>

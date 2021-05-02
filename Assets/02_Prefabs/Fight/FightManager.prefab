@@ -47,3 +47,4 @@ MonoBehaviour:
   player: {fileID: 0}
   enemy: {fileID: 0}
   fightFinish: 0
+  boss: {fileID: 11400000, guid: cce0be3f4e62f7a4e8837b92fd236167, type: 2}

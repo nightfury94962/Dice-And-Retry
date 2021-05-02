@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerControler : Controler
 {
+	public AudioSource audioSource;
+	public AudioClip damageSound;
+
 	public EntityMotor motor;
 
 	private void OnEnable()
@@ -25,8 +28,10 @@ public class PlayerControler : Controler
 
 	public void PlayDice(Dice dice)
 	{
+		
 		if (motor.myTurn)
 		{
+			AudioSource.PlayClipAtPoint(damageSound, transform.position);
 			motor.PlayDice(dice);
 			UIManager.instance.inventory.RefreshDiceBar(motor.dices, this);
 		}

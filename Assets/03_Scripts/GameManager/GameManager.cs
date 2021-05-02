@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
 
 	public void LoadRealGameOver()
 	{
-		SceneManager.LoadScene("");
+		SceneManager.LoadScene("Conclusion");
 
 		foreach (GameObject _go in gameObject.scene.GetRootGameObjects())
 		{

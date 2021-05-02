@@ -68,7 +68,7 @@ public class FightManager : MonoBehaviour
 
 		if (((EnemyControler)enemy.controler).enemyData == boss)
 		{
-
+			GameManager.instance.LoadRealGameOver();
 		}
 		else if (player.life == 0)
 		{

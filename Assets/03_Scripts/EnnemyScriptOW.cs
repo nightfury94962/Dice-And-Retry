@@ -20,7 +20,7 @@ public class EnnemyScriptOW : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = enemyData.sprites[spritIndex];
 		}
 
-        if (Input.GetKeyDown(KeyCode.E)  && isInRange)
+        if (Input.GetKeyDown(KeyCode.E)  && isInRange && Player.instence.dices.Count != 0)
         {
             GameManager.instance.LoadCombatScene(this);
         }
@@ -30,7 +30,11 @@ public class EnnemyScriptOW : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            InteractUI.instance.SetText("Appuie sur 'E' pour te battre avec " + enemyData.name);
+            if (Player.instence.dices.Count != 0)
+			    InteractUI.instance.SetText("Appuie sur 'E' pour te battre avec " + enemyData.name);
+            else
+                InteractUI.instance.SetText("Tu aura du mal a combatre " + enemyData.name + " sans dé");
+
             isInRange = true;
         }
     }
