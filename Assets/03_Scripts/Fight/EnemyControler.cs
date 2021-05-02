@@ -83,10 +83,5 @@ public class EnemyControler : Controler
 				motor.myTurn = false;
 			}
 		}
-
-		if (Input.GetKeyDown(KeyCode.L))
-		{
-			motor.life = 0;
-		}
 	}
 }
