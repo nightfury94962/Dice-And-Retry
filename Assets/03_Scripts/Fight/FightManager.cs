@@ -51,6 +51,14 @@ public class FightManager : MonoBehaviour
 			fightFinish = true;
 			player.myTurn = false;
 			enemy.myTurn = false;
+			if (player.life == 0)
+			{
+				player.gfx.Die();
+			}
+			else
+			{
+				enemy.gfx.Die();
+			}
 		}
 	}
 
