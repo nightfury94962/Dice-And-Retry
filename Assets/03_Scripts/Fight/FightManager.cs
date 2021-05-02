@@ -58,6 +58,7 @@ public class FightManager : MonoBehaviour
 			else
 			{
 				enemy.gfx.Die();
+				enemy.gfx.GetComponent<Animator>().SetBool("isDie", true);
 			}
 		}
 	}
